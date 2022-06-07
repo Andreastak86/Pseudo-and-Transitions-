@@ -18,13 +18,36 @@ p {
   padding-top: 5px;
   font-size: 18px;
 }
+p::first-letter {
+  color: #ab0f55;
+  font-size: 20px;
+  margin-right: 1px;
+}
+p::first-line {
+  background-color: rgb(247, 133, 133);
+}
+
 h1::first-letter {
   color: #e4a5ff;
   font-size: 50px;
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 /* class*/
+
+/* Here I use span classes just to make Pseudo and Transitions to look different*/
+.PE {
+  text-decoration: underline;
+  color: #f2bac9;
+  font-weight: bold;
+}
+.TR {
+  text-decoration: underline overline #b5179e;
+  color: #f2bac9;
+  font-weight: bolder;
+}
+/* end of span marking*/
+
 /* example 1*/
 .boxOne {
   width: 100px;
@@ -82,12 +105,12 @@ h1::first-letter {
 
 .circle0 {
   background: #f72585;
-  transition: all 1.5s linear;
+  transition: all 1.5s ease;
 }
 
 .circle1 {
   background: #4361ee;
-  transition: all 1.5s ease;
+  transition: all 1.5s linear;
 }
 
 .circle2 {
@@ -97,12 +120,12 @@ h1::first-letter {
 
 .circle3 {
   background: #b5179e;
-  transition: all 1.5s ease-out;
+  transition: all 1.5s ease-in-out;
 }
 
 .circle4 {
   background: #4cc9f0;
-  transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-out;
 }
 
 .circle5 {
@@ -115,8 +138,8 @@ h1::first-letter {
   background: #f72585;
   border-radius: 20% 40%;
   height: 100px;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-left: 100px;
+  margin-top: 60px;
   transition: all 3s ease-in-out;
   width: 100px;
 }
@@ -131,8 +154,8 @@ h1::first-letter {
   background: #7209b7;
   border-radius: 5px 50%;
   height: 100px;
-  margin-left: 150px;
-  margin-top: 100px;
+  margin-left: 250px;
+  margin-top: 150px;
   transform-origin: left top;
   transition: transform 3s;
   width: 100px;
@@ -146,11 +169,11 @@ h1::first-letter {
   background-color: #f72585;
   color: #8711c1;
   border: none;
-
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 80px;
   padding: 20px;
   font-size: 20px;
   cursor: grabbing;
@@ -159,7 +182,28 @@ h1::first-letter {
 .btnbot:hover {
   background-color: #8711c1;
   color: #f72585;
+  transform: rotateZ(45deg);
 }
+
+/* marking text to change color*/
+.purple::selection {
+  background-color: #8338ec;
+}
+
+.red::selection {
+  background-color: red;
+}
+
+.green::selection {
+  background-color: green;
+}
+
+.yellow::selection {
+  background-color: yellow;
+}
+/* End of marked text*/
+
+/* ID's*/
 
 #maincat {
   color: #4a006f;
